@@ -6,16 +6,16 @@ const GA_ID = 'G-TV6E2RZLKW'
 
 export const metadata: Metadata = {
   title: {
-    default: 'SimplifAI Solutions | AI Receptionists for Service Businesses',
+    default: 'SimplifAI | AI Receptionist for Service Businesses',
     template: '%s',
   },
-  description: 'SimplifAI builds custom AI receptionists, chatbots, and websites that work 24/7 for service businesses. Never miss a call or lead again.',
+  description: 'SimplifAI Solutions builds custom AI receptionists for service businesses — HVAC, real estate, lawn care, auto detailing, and more. Answer calls 24/7, book jobs, and never miss a lead again.',
   keywords: 'AI receptionist, AI answering service, 24/7 call answering, service business AI, missed calls solution, AI chatbot for website, custom website service business',
   authors: [{ name: 'SimplifAI Solutions' }],
   metadataBase: new URL('https://simplifai-solutions.com'),
   openGraph: {
-    title: 'SimplifAI Solutions | AI Receptionists for Service Businesses',
-    description: 'Custom AI receptionists, chatbots, and websites for service businesses. Never miss a lead, even when you\'re on the job.',
+    title: 'SimplifAI | AI Receptionist for Service Businesses',
+    description: 'SimplifAI Solutions builds custom AI receptionists for service businesses. Answer calls 24/7, book jobs automatically, and never miss a lead — even when you\'re on the job.',
     url: 'https://simplifai-solutions.com',
     siteName: 'SimplifAI Solutions',
     type: 'website',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SimplifAI Solutions | AI Receptionists for Service Businesses',
-    description: 'AI receptionist, chatbot & custom websites for service businesses. 24/7 lead capture on autopilot.',
+    title: 'SimplifAI | AI Receptionist for Service Businesses',
+    description: 'SimplifAI Solutions builds custom AI receptionists for service businesses. Answer calls 24/7, book jobs automatically, and never miss a lead.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -46,12 +46,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': ['Organization', 'ProfessionalService'],
               name: 'SimplifAI Solutions',
+              alternateName: 'SimplifAI',
               url: 'https://simplifai-solutions.com',
               logo: {
                 '@type': 'ImageObject',
                 url: 'https://simplifai-solutions.com/logo.png',
               },
-              description: 'Custom AI receptionists, chatbots, and websites for service businesses.',
+              description: 'SimplifAI Solutions is an AI receptionist company founded by Tadeáš Manas in June 2025, based in Alabama. We build custom AI receptionists for service businesses — including HVAC companies, real estate agents, lawn care businesses, and auto detailing shops — that answer calls 24/7, book appointments, and qualify leads automatically.',
+              foundingDate: '2025-06',
               founder: {
                 '@type': 'Person',
                 name: 'Tadeáš Manas',

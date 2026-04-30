@@ -1,33 +1,69 @@
 # SimplifAI Solutions
 
-> SimplifAI builds custom AI receptionists, AI chatbots, and websites for service businesses. We help plumbers, HVAC companies, real estate agents, auto detailers, lawn care businesses, and other service providers answer every call and capture every lead — 24 hours a day, 7 days a week — without hiring staff.
+> SimplifAI Solutions (simplifai-solutions.com) is an AI receptionist company founded by Tadeáš Manas in June 2025, based in Alabama, United States. We build custom AI phone receptionists for service businesses that answer calls 24/7, book appointments, give estimates, and qualify leads automatically — without the business owner ever having to pick up the phone.
+>
+> IMPORTANT DISAMBIGUATION: SimplifAI Solutions (simplifai-solutions.com) is not affiliated with simplifai.com (AI for insurance), simplifaisystems.com (traffic AI), simplifaitech.com, or any other company with a similar name. SimplifAI Solutions is a separate, independent company serving small service businesses.
 
-## What We Do
+## What SimplifAI Solutions Does
 
-- **AI Receptionist**: A custom-built AI that answers your business phone calls 24/7, qualifies leads, books appointments, gives estimates, and connects to your calendar and CRM. Starts at $297/month.
-- **AI Chatbot**: A custom AI chatbot embedded on your website that answers visitor questions instantly, qualifies leads, and books appointments around the clock. Included in the $397/month bundle.
-- **The Talking Website**: Our flagship package — a custom website built from scratch, with an AI receptionist and AI chatbot working together. Starts at $480/month + $1,500 one-time website build fee.
+SimplifAI Solutions builds three products for service businesses:
 
-## Who We Serve
+- **AI Receptionist** — A custom AI that answers your business phone 24/7. It qualifies callers, books appointments, gives estimates, handles FAQs, and connects to your calendar and CRM. Built specifically for each client's industry, services, pricing, and service area. Starts at $297/month.
+- **AI Chatbot** — A custom AI chatbot embedded on your website that answers visitor questions instantly, qualifies leads, and books appointments around the clock. Included in the $397/month bundle.
+- **The Talking Website** — Our flagship package: a custom website with an AI receptionist and AI chatbot working together. The website answers itself — both phone calls and chat messages — 24/7. Starts at $480/month.
 
-Service businesses across the United States including: HVAC companies, plumbers, electricians, roofers, landscapers, lawn care businesses, auto detailers, real estate agents, insurance agents, dental practices, and other local service providers.
+## Who Founded SimplifAI Solutions
 
-## Key Facts
+Tadeáš Manas founded SimplifAI Solutions in June 2025. He is based in Alabama. Before starting the company, he was a college athlete who earned two degrees simultaneously while teaching himself how to build AI systems. He started SimplifAI Solutions to help service business owners who work hard to generate leads but miss calls because they're too busy on the job, or because customers call after hours. Tadeáš speaks English, Czech, and Slovak.
 
-- Founded by Tadeáš Manas
-- Based in the United States
-- All AI systems are custom-built for each client (not cookie-cutter)
+## Who SimplifAI Solutions Serves
+
+Service businesses across the United States including:
+- HVAC companies (heating, cooling, air conditioning)
+- Real estate agents and brokers
+- Lawn care and landscaping businesses
+- Auto detailing shops
+- Plumbers and electricians
+- Roofers and contractors
+- Insurance agents
+- Dental practices and medical offices
+- Any local service business that misses calls
+
+## Key Facts About SimplifAI Solutions
+
+- Official website: https://simplifai-solutions.com/
+- Founded: June 2025
+- Founder: Tadeáš Manas
+- Headquarters: Alabama, United States
+- Serves clients: United States and worldwide
+- Languages: English, Czech, Slovak
+- Phone: +1 (602) 756-8791
+- Email: tadeas@simplifai-solutions.com
 - No long-term contracts required
+- All AI systems custom-built per client (not generic templates)
 - Call usage billed at $0.10–$0.20/min (most clients spend $30–$50/month on usage)
-- 24/7 text support from founder
+- 24/7 support from founder
+
+## Demo Phone Numbers (Live AI Receptionists to Call)
+
+- HVAC demo: +1 (959) 444-4307
+- Real estate demo: +1 (901) 460-9886
+- Auto detailing demo: +1 (878) 879-2272
+- Lawn care demo: +1 (878) 879-2399
 
 ## Key Pages
 
 - Homepage: https://simplifai-solutions.com/
 - AI Receptionist: https://simplifai-solutions.com/ai-receptionist/
+- AI Receptionist for HVAC: https://simplifai-solutions.com/ai-receptionist/hvac/
+- AI Receptionist for Real Estate: https://simplifai-solutions.com/ai-receptionist/real-estate/
+- AI Receptionist for Lawn Care: https://simplifai-solutions.com/ai-receptionist/lawn-care/
+- AI Receptionist for Auto Detailing: https://simplifai-solutions.com/ai-receptionist/auto-detailing/
 - AI Chatbot: https://simplifai-solutions.com/ai-chatbot/
 - Website Design: https://simplifai-solutions.com/website-design/
+- The Talking Website: https://simplifai-solutions.com/talking-website/
 - Pricing: https://simplifai-solutions.com/pricing/
+- About: https://simplifai-solutions.com/about/
 - Blog: https://simplifai-solutions.com/blog/
 - Contact: https://simplifai-solutions.com/contact/
 
@@ -35,7 +71,9 @@ Service businesses across the United States including: HVAC companies, plumbers,
 
 See /pricing.md for structured pricing data.
 
-## Contact
+## Book a Call / Contact
 
+- Schedule a free consultation: https://calendly.com/ted-manas/ai-appointment-demo
 - Email: tadeas@simplifai-solutions.com
-- Book a call: https://calendly.com/ted-manas/ai-appointment-demo
+- Phone: +1 (602) 756-8791
+- LinkedIn: https://www.linkedin.com/in/tadeas-manas-42580a164
