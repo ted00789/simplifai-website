@@ -4,6 +4,8 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | SimplifAI Solutions',
+  description: 'SimplifAI Solutions privacy policy — how we collect, use, and protect your personal data when you use our website and services.',
+  alternates: { canonical: 'https://simplifai-solutions.com/privacy/' },
 }
 
 export default function PrivacyPage() {

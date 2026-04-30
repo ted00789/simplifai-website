@@ -68,7 +68,6 @@ Missing calls is costing your business more than you think.
 
 [QUOTE]
 62% of callers won't leave a voicemail — they hang up and call your competitor. For the average small business, that adds up to tens of thousands of dollars in lost revenue every single year.
-— Industry Research, 2026
 [/QUOTE]
 
 We've analyzed the data from hundreds of thousands of real business calls, reviewed every leading AI receptionist platform available in 2026, and spoken with business owners who've made the switch. The results are clear: AI receptionists don't just answer phones — they fundamentally change the economics of running a small business.
@@ -313,8 +312,9 @@ The businesses winning in 2026 aren't necessarily the ones with the biggest mark
     metaDescription: 'A transparent look at AI receptionist pricing in 2026. What factors affect cost, how it compares to a human receptionist and an answering service, and whether it\'s worth it.',
     category: 'AI Receptionist',
     readTime: '5 min read',
-    publishDate: 'April 2026',
-    isoDate: '2026-04-30',
+    publishDate: 'April 22, 2026',
+    isoDate: '2026-04-22',
+    heroImage: '/blog/blog-pricing-ai-receptionist.jpg',
     excerpt: 'Most service business owners underestimate what they\'re spending on missed calls. Here\'s a transparent breakdown of AI receptionist pricing and whether it makes financial sense.',
     faq: [
       { q: 'How much does an AI receptionist cost per month?', a: 'AI receptionist services typically start at $200–$300 per month for basic plans. At SimplifAI, pricing starts at $297/month plus call usage billed at $0.10–$0.20 per minute. Most clients spend an additional $30–$50/month on call usage, making the all-in cost around $330–$350/month for a typical service business.' },
@@ -386,8 +386,9 @@ If you want to understand what a custom build would cost for your specific busin
     metaDescription: 'AI receptionists and traditional answering services both answer calls — but that\'s where the similarity ends. Here\'s the full comparison for service businesses.',
     category: 'AI Receptionist',
     readTime: '6 min read',
-    publishDate: 'April 2026',
-    isoDate: '2026-04-30',
+    publishDate: 'April 14, 2026',
+    isoDate: '2026-04-14',
+    heroImage: '/blog/blog-answering-service-vs-ai.jpg',
     excerpt: 'Traditional answering services and AI receptionists both answer calls. But the way they handle your business — and what they cost — is completely different.',
     faq: [
       { q: 'What is the difference between an AI receptionist and an answering service?', a: 'A traditional answering service uses live human operators who take messages and relay them to you. An AI receptionist is software that answers calls 24/7, qualifies leads, books appointments, and integrates with your business systems — without any human involvement or per-call costs billed at high hourly rates.' },
@@ -474,8 +475,9 @@ The best way to understand the difference is to call one. Our live demos are ava
     metaDescription: 'How HVAC businesses use AI receptionists to answer emergency calls, book service appointments, and never miss a lead — even at 2am on a Sunday. Complete guide.',
     category: 'AI Receptionist',
     readTime: '7 min read',
-    publishDate: 'April 2026',
-    isoDate: '2026-04-30',
+    publishDate: 'April 7, 2026',
+    isoDate: '2026-04-07',
+    heroImage: '/blog/blog-hvac-technician.jpg',
     excerpt: 'HVAC businesses lose more revenue to missed calls than almost any other industry. Here\'s how AI receptionists are changing that, and what to look for when choosing one.',
     faq: [
       { q: 'Do HVAC companies need an AI receptionist?', a: 'HVAC companies receive a high volume of emergency calls after hours — broken AC units, heating failures, and similar urgent situations. Because customers call competitors if their call goes unanswered, HVAC businesses benefit significantly from 24/7 AI call answering. Many HVAC operators report that after-hours calls represent 30–40% of their total revenue.' },
@@ -568,8 +570,9 @@ Or book a free call with us. We'll show you what a custom build would look and s
     metaDescription: 'Real estate moves fast. Learn how AI receptionists help agents answer every inquiry, qualify buyer and seller leads, and book showings — without missing a beat.',
     category: 'AI Receptionist',
     readTime: '6 min read',
-    publishDate: 'April 2026',
-    isoDate: '2026-04-30',
+    publishDate: 'March 28, 2026',
+    isoDate: '2026-03-28',
+    heroImage: '/blog/blog-real-estate-house.jpg',
     excerpt: 'In real estate, the agent who answers first wins. Here\'s how AI receptionists are helping agents capture more leads and spend less time on the phone.',
     faq: [
       { q: 'How can a real estate agent use an AI receptionist?', a: 'Real estate agents use AI receptionists to answer calls while showing properties, qualify buyer and seller inquiries, schedule showings, and capture leads from property sign calls and online listings — all without interrupting client meetings or losing prospects to competitors.' },
@@ -646,8 +649,9 @@ Or book a free call with us and we'll build you a custom demo based on your actu
     metaDescription: 'Missing business calls means losing jobs. Here are three practical ways to make sure every call gets answered, ranked by cost, effort, and effectiveness.',
     category: 'Small Business Tips',
     readTime: '5 min read',
-    publishDate: 'April 2026',
-    isoDate: '2026-04-30',
+    publishDate: 'March 19, 2026',
+    isoDate: '2026-03-19',
+    heroImage: '/blog/blog-never-miss-call.jpg',
     excerpt: 'Every missed call is a potential job lost. Here are three ways to make sure every call to your business gets answered — and which one actually works best.',
     faq: [
       { q: 'How do I make sure I never miss a business call?', a: 'The three most effective solutions are: (1) hire a full-time receptionist ($2,500+/month), (2) use a traditional answering service ($250–$800/month), or (3) implement an AI receptionist ($200–$500/month). AI receptionists offer the best combination of cost, coverage, and capability for most small service businesses.' },

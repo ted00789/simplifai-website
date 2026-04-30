@@ -47,35 +47,40 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': ['Organization', 'ProfessionalService'],
               name: 'SimplifAI Solutions',
               url: 'https://simplifai-solutions.com',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://simplifai-solutions.com/logo.png',
+              },
               description: 'Custom AI receptionists, chatbots, and websites for service businesses.',
-              founder: { '@type': 'Person', name: 'Tadeáš Manas' },
-              areaServed: 'US',
+              founder: {
+                '@type': 'Person',
+                name: 'Tadeáš Manas',
+                sameAs: [
+                  'https://www.linkedin.com/in/tadeas-manas-42580a164',
+                  'https://www.instagram.com/ted_manas/',
+                ],
+              },
+              telephone: '+16027568791',
+              email: 'tadeas@simplifai-solutions.com',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Alabama',
+                addressCountry: 'US',
+              },
+              areaServed: ['US', 'Worldwide'],
+              knowsLanguage: ['en', 'cs', 'sk'],
               priceRange: '$$',
               serviceType: ['AI Receptionist', 'AI Chatbot', 'Website Design'],
+              sameAs: [
+                'https://www.linkedin.com/in/tadeas-manas-42580a164',
+                'https://www.instagram.com/ted_manas/',
+              ],
               contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'sales',
+                telephone: '+16027568791',
                 email: 'tadeas@simplifai-solutions.com',
               },
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'ItemList',
-              name: 'SimplifAI Solutions — Main Navigation',
-              itemListElement: [
-                {
-                  '@type': 'SiteLinksSearchBox',
-                  'target': {
-                    '@type': 'EntryPoint',
-                    'urlTemplate': 'https://simplifai-solutions.com/?q={search_term_string}',
-                  },
-                },
-              ],
             }),
           }}
         />
@@ -102,25 +107,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     '@type': 'ListItem',
                     position: 1,
                     name: 'AI Receptionist',
-                    url: 'https://simplifai-solutions.com/#ai-receptionist',
+                    url: 'https://simplifai-solutions.com/ai-receptionist/',
                   },
                   {
                     '@type': 'ListItem',
                     position: 2,
                     name: 'AI Chatbot',
-                    url: 'https://simplifai-solutions.com/#ai-chatbot',
+                    url: 'https://simplifai-solutions.com/ai-chatbot/',
                   },
                   {
                     '@type': 'ListItem',
                     position: 3,
                     name: 'Website Design',
-                    url: 'https://simplifai-solutions.com/#websites',
+                    url: 'https://simplifai-solutions.com/website-design/',
                   },
                   {
                     '@type': 'ListItem',
                     position: 4,
                     name: 'Pricing',
-                    url: 'https://simplifai-solutions.com/#pricing',
+                    url: 'https://simplifai-solutions.com/pricing/',
                   },
                   {
                     '@type': 'ListItem',
@@ -132,7 +137,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     '@type': 'ListItem',
                     position: 6,
                     name: 'Contact',
-                    url: 'https://simplifai-solutions.com/#contact',
+                    url: 'https://simplifai-solutions.com/contact/',
                   },
                 ],
               },

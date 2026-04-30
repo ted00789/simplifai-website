@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { ArrowRight, Phone, Clock, Users, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Phone, Clock, Users, ShieldCheck, Linkedin, Instagram } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About Tadeáš & SimplifAI Solutions',
@@ -46,17 +46,34 @@ export default function AboutPage() {
                 border: '1px solid rgba(34,211,238,0.15)',
               }}
             >
-              <div className="w-full h-full flex flex-col items-center justify-center gap-4">
-                <div
-                  className="w-32 h-32 rounded-full flex items-center justify-center text-5xl font-black"
-                  style={{ background: 'rgba(34,211,238,0.1)', border: '2px solid rgba(34,211,238,0.3)', color: '#22d3ee' }}
+              <img
+                src="/author.jpg"
+                alt="Tadeáš Manas — Founder of SimplifAI Solutions"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="max-w-sm mt-4">
+              <p className="font-bold text-white text-xl">Tadeáš Manas</p>
+              <p className="text-sm mt-0.5 mb-3" style={{ color: '#64748b' }}>Founder, SimplifAI Solutions · Alabama, US</p>
+              <div className="flex gap-3">
+                <a
+                  href="https://www.linkedin.com/in/tadeas-manas-42580a164"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:text-white"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', color: '#94a3b8' }}
                 >
-                  T
-                </div>
-                <div className="text-center">
-                  <p className="font-bold text-white text-xl">Tadeáš Manas</p>
-                  <p className="text-sm mt-1" style={{ color: '#64748b' }}>Founder, SimplifAI Solutions</p>
-                </div>
+                  <Linkedin size={14} /> LinkedIn
+                </a>
+                <a
+                  href="https://www.instagram.com/ted_manas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:text-white"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', color: '#94a3b8' }}
+                >
+                  <Instagram size={14} /> Instagram
+                </a>
               </div>
             </div>
 
@@ -89,8 +106,9 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-black text-white mb-4">The Origin Story</h2>
               <div className="space-y-4 text-lg leading-relaxed" style={{ color: '#94a3b8' }}>
-                <p>I started SimplifAI because I kept seeing the same problem: hardworking business owners putting everything into their craft, their marketing, their reputation, and then losing customers at the very last step because nobody picked up the phone.</p>
-                <p>The marketing works. The work is great. The reputation is solid. But the phone rings and nobody answers. That lead (which cost real money and effort to generate) calls the next result on Google. Gone.</p>
+                <p>I&apos;m a former college athlete who competed while earning two degrees simultaneously. In my spare time, I taught myself how to build AI systems — not because it was assigned, but because I was obsessed with what the technology could actually do for real businesses.</p>
+                <p>In June 2025, I founded SimplifAI after watching the same problem play out over and over: hardworking business owners investing real money into marketing and their reputation, then losing customers at the very last step because nobody picked up the phone.</p>
+                <p>The marketing works. The work is great. The reputation is solid. But the phone rings and nobody answers. That lead calls the next result on Google. Gone.</p>
               </div>
             </div>
 

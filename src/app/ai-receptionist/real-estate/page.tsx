@@ -37,6 +37,22 @@ const faqs = [
 export default function RealEstatePage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'Service',
+        name: 'AI Receptionist for Real Estate Agents',
+        description: 'Custom AI receptionist that answers buyer and seller inquiries 24/7, qualifies leads, books showings, and captures every real estate inquiry.',
+        provider: { '@type': 'Organization', name: 'SimplifAI Solutions', url: 'https://simplifai-solutions.com' },
+        areaServed: 'US', serviceType: 'AI Receptionist',
+        url: 'https://simplifai-solutions.com/ai-receptionist/real-estate/',
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://simplifai-solutions.com' },
+          { '@type': 'ListItem', position: 2, name: 'AI Receptionist', item: 'https://simplifai-solutions.com/ai-receptionist/' },
+          { '@type': 'ListItem', position: 3, name: 'Real Estate', item: 'https://simplifai-solutions.com/ai-receptionist/real-estate/' },
+        ],
+      })}} />
       <Navigation />
 
       {/* Hero */}

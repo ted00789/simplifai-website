@@ -4,6 +4,8 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Terms of Service | SimplifAI Solutions',
+  description: 'Terms of Service for SimplifAI Solutions — the rules governing your use of our AI receptionist, chatbot, and website design services.',
+  alternates: { canonical: 'https://simplifai-solutions.com/terms/' },
 }
 
 export default function TermsPage() {

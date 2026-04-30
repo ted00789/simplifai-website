@@ -37,6 +37,22 @@ const faqs = [
 export default function AutoDetailingPage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'Service',
+        name: 'AI Receptionist for Auto Detailing Businesses',
+        description: 'Custom AI receptionist that answers calls 24/7, books detailing appointments, quotes pricing by vehicle type, and handles every inquiry for auto detailing shops.',
+        provider: { '@type': 'Organization', name: 'SimplifAI Solutions', url: 'https://simplifai-solutions.com' },
+        areaServed: 'US', serviceType: 'AI Receptionist',
+        url: 'https://simplifai-solutions.com/ai-receptionist/auto-detailing/',
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://simplifai-solutions.com' },
+          { '@type': 'ListItem', position: 2, name: 'AI Receptionist', item: 'https://simplifai-solutions.com/ai-receptionist/' },
+          { '@type': 'ListItem', position: 3, name: 'Auto Detailing', item: 'https://simplifai-solutions.com/ai-receptionist/auto-detailing/' },
+        ],
+      })}} />
       <Navigation />
 
       {/* Hero */}

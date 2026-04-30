@@ -100,8 +100,8 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black tracking-tight text-white leading-[1.07] mb-6">
-              Stop losing clients to competitors who are{' '}
-              <span className="gradient-text">available 24/7.</span>
+              AI Receptionist for Service Businesses{' '}
+              <span className="gradient-text">That Can&apos;t Afford to Miss Calls.</span>
             </h1>
 
             {/* Subheadline */}
