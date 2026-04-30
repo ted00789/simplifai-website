@@ -7,6 +7,36 @@ export interface BlogPost {
   readTime: string
   publishDate: string
   excerpt: string
+  /** Optional hero image path under /public, e.g. '/blog/my-post.jpg' */
+  heroImage?: string
+  /**
+   * Content uses Markdown-like syntax PLUS these special blocks:
+   *
+   * [CALLOUT]
+   * PRO-TIP: Title line here
+   * Body text goes here (can be multiple sentences).
+   * [/CALLOUT]
+   *
+   * [QUOTE]
+   * The quote text goes here in full.
+   * — Attribution Name / Source
+   * [/QUOTE]
+   *
+   * [COMPARE]
+   * Left Column Title | Right Column Title
+   * Left row item | Right row item
+   * Another left item | Another right item
+   * [/COMPARE]
+   *
+   * Standard syntax also supported:
+   *   ## Heading 2
+   *   ### Heading 3
+   *   **Bold standalone line**
+   *   **Inline bold** inside a sentence
+   *   *Italic text*
+   *   - Bullet list item
+   *   | Col1 | Col2 |  (tables, with |---|---| separator row)
+   */
   content: string
 }
 
