@@ -48,7 +48,7 @@ function CalloutBlock({ content }: { content: string }) {
         </p>
         {body && (
           <p className="text-sm leading-relaxed" style={{ color: '#94a3b8' }}>
-            {body}
+            {renderInline(body)}
           </p>
         )}
       </div>
@@ -126,10 +126,11 @@ function CompareBlock({ content }: { content: string }) {
 
 // ─── Content Renderer ─────────────────────────────────────────────────────────
 
-/** Render **bold** and *italic* inline markers */
+/** Render **bold**, *italic*, and [text](url) inline markers */
 function renderInline(text: string): React.ReactNode {
-  if (!text.includes('*')) return text
-  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/)
+  if (!text.includes('*') && !text.includes('[')) return text
+  // Split on [text](url), **bold**, *italic* — longest patterns first
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|\*[^*]+\*)/)
   return (
     <>
       {parts.map((part, j) => {
@@ -139,6 +140,29 @@ function renderInline(text: string): React.ReactNode {
               {part.replace(/\*\*/g, '')}
             </strong>
           )
+        }
+        if (part.startsWith('[')) {
+          const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+          if (m) {
+            const isExternal = m[2].startsWith('http')
+            return (
+              <a
+                key={j}
+                href={m[2]}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener noreferrer' : undefined}
+                className="transition-colors hover:text-cyan-300"
+                style={{
+                  color: '#22d3ee',
+                  textDecoration: 'underline',
+                  textDecorationColor: 'rgba(34,211,238,0.35)',
+                }}
+              >
+                {m[1]}
+              </a>
+            )
+          }
+          return part
         }
         if (part.startsWith('*')) {
           return (
@@ -465,8 +489,56 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug)
   if (!post) notFound()
 
+  const postUrl = `https://simplifai-solutions.com/blog/${post.slug}/`
+
   return (
     <main>
+      {/* ── Structured Data ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: post.title,
+            description: post.metaDescription,
+            image: post.heroImage
+              ? `https://simplifai-solutions.com${post.heroImage}`
+              : 'https://simplifai-solutions.com/og-image.png',
+            author: {
+              '@type': 'Person',
+              name: 'Tadeáš Manas',
+              url: 'https://simplifai-solutions.com',
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'SimplifAI Solutions',
+              url: 'https://simplifai-solutions.com',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://simplifai-solutions.com/og-image.png',
+              },
+            },
+            datePublished: '2026-04-30',
+            mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://simplifai-solutions.com' },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://simplifai-solutions.com/blog/' },
+              { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
+            ],
+          }),
+        }}
+      />
+
       <Navigation />
 
       <div className="pt-28 pb-20 px-6">
