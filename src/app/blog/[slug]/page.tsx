@@ -350,31 +350,57 @@ function Sidebar({ currentSlug }: { currentSlug: string }) {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Book a call CTA */}
+      {/* Demo CTA card */}
       <div
         className="rounded-2xl p-6"
         style={{
-          background: 'linear-gradient(135deg, rgba(34,211,238,0.1) 0%, rgba(34,211,238,0.04) 100%)',
-          border: '1px solid rgba(34,211,238,0.22)',
+          background: 'linear-gradient(135deg, rgba(34,211,238,0.08) 0%, rgba(34,211,238,0.03) 100%)',
+          border: '1px solid rgba(34,211,238,0.2)',
         }}
       >
         <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#22d3ee' }}>
-          Free Demo Call
+          Try It Yourself
         </p>
         <h3 className="text-lg font-black text-white mb-2 leading-snug">
-          Hear what an AI receptionist sounds like for your business
+          Call a live AI receptionist right now
         </h3>
         <p className="text-sm mb-5" style={{ color: '#94a3b8' }}>
-          We&apos;ll build a custom demo and walk you through it. No commitment.
+          Our demos are live 24/7. Pick an industry, call the number — no sign-up, no pitch.
         </p>
-        <a
-          href="https://calendly.com/ted-manas/ai-appointment-demo"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold btn-primary"
-        >
-          <Phone size={14} /> Book a Free Call
-        </a>
+        <div className="space-y-2">
+          {[
+            { label: 'HVAC', emoji: '🌡️', number: '+1 (959) 444-4307' },
+            { label: 'Auto Detailing', emoji: '🚗', number: '+1 (878) 879-2272' },
+            { label: 'Real Estate', emoji: '🏠', number: '+1 (901) 460-9886' },
+            { label: 'Lawn Care', emoji: '🌿', number: '+1 (878) 879-2399' },
+          ].map(({ label, emoji, number }) => (
+            <a
+              key={label}
+              href={`tel:${number.replace(/[^+\d]/g, '')}`}
+              className="flex items-center justify-between w-full px-3.5 py-2.5 rounded-xl text-sm transition-all"
+              style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.08)',
+              }}
+            >
+              <span className="font-medium text-white flex items-center gap-2">
+                <span>{emoji}</span> {label}
+              </span>
+              <span className="font-mono text-xs" style={{ color: '#22d3ee' }}>{number}</span>
+            </a>
+          ))}
+        </div>
+        <div className="mt-5 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+          <a
+            href="https://calendly.com/ted-manas/ai-appointment-demo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-cyan-400"
+            style={{ color: '#475569' }}
+          >
+            <Phone size={12} /> Want one for your business? Book a call
+          </a>
+        </div>
       </div>
 
       {/* Recent posts */}
@@ -456,6 +482,23 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-6 leading-tight">
                 {post.title}
               </h1>
+
+              {/* Author byline */}
+              <div className="flex items-center gap-3 mb-8">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/author.jpg"
+                  alt="Tadeáš Manas"
+                  className="w-10 h-10 rounded-full object-cover shrink-0"
+                  style={{ border: '2px solid rgba(34,211,238,0.3)' }}
+                />
+                <div>
+                  <p className="text-sm font-semibold text-white leading-none mb-1">Tadeáš Manas</p>
+                  <p className="text-xs" style={{ color: '#475569' }}>
+                    Founder, SimplifAI Solutions
+                  </p>
+                </div>
+              </div>
 
               {/* Hero image */}
               {post.heroImage && (
