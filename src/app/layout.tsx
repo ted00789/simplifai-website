@@ -142,6 +142,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         {children}
+        <div style={{ width: 0, height: 0 }} id="VG_OVERLAY_CONTAINER" />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
@@ -152,6 +153,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_ID}', { page_path: window.location.pathname });
+          `}
+        </Script>
+        <Script id="voiceglow-chatbot" strategy="afterInteractive">
+          {`
+            (function() {
+              window.VG_CONFIG = {
+                ID: "eAUOC7HmBTKDZS2Scw6I",
+                region: 'na',
+                render: 'bottom-right',
+                stylesheets: [
+                  "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css"
+                ],
+                autostart: true,
+              };
+              var VG_SCRIPT = document.createElement("script");
+              VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
+              VG_SCRIPT.defer = true;
+              document.body.appendChild(VG_SCRIPT);
+            })();
           `}
         </Script>
       </body>
