@@ -6,7 +6,7 @@ const GA_ID = 'G-TV6E2RZLKW'
 
 export const metadata: Metadata = {
   title: {
-    default: 'AI Receptionist for Service Businesses | SimplifAI Solutions',
+    default: 'SimplifAI Solutions | AI Receptionists for Service Businesses',
     template: '%s',
   },
   description: 'SimplifAI builds custom AI receptionists, chatbots, and websites that work 24/7 for service businesses. Never miss a call or lead again.',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'SimplifAI Solutions' }],
   metadataBase: new URL('https://simplifai-solutions.com'),
   openGraph: {
-    title: 'AI Receptionist for Service Businesses | SimplifAI Solutions',
+    title: 'SimplifAI Solutions | AI Receptionists for Service Businesses',
     description: 'Custom AI receptionists, chatbots, and websites for service businesses. Never miss a lead, even when you\'re on the job.',
     url: 'https://simplifai-solutions.com',
     siteName: 'SimplifAI Solutions',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Receptionist for Service Businesses | SimplifAI Solutions',
+    title: 'SimplifAI Solutions | AI Receptionists for Service Businesses',
     description: 'AI receptionist, chatbot & custom websites for service businesses. 24/7 lead capture on autopilot.',
     images: ['/og-image.png'],
   },
@@ -58,6 +58,85 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 email: 'tadeas@simplifai-solutions.com',
               },
             }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ItemList',
+              name: 'SimplifAI Solutions — Main Navigation',
+              itemListElement: [
+                {
+                  '@type': 'SiteLinksSearchBox',
+                  'target': {
+                    '@type': 'EntryPoint',
+                    'urlTemplate': 'https://simplifai-solutions.com/?q={search_term_string}',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'SimplifAI Solutions',
+                url: 'https://simplifai-solutions.com',
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target: 'https://simplifai-solutions.com/?q={search_term_string}',
+                  'query-input': 'required name=search_term_string',
+                },
+              },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'ItemList',
+                itemListElement: [
+                  {
+                    '@type': 'ListItem',
+                    position: 1,
+                    name: 'AI Receptionist',
+                    url: 'https://simplifai-solutions.com/#ai-receptionist',
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 2,
+                    name: 'AI Chatbot',
+                    url: 'https://simplifai-solutions.com/#ai-chatbot',
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 3,
+                    name: 'Website Design',
+                    url: 'https://simplifai-solutions.com/#websites',
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 4,
+                    name: 'Pricing',
+                    url: 'https://simplifai-solutions.com/#pricing',
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 5,
+                    name: 'Blog',
+                    url: 'https://simplifai-solutions.com/blog/',
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 6,
+                    name: 'Contact',
+                    url: 'https://simplifai-solutions.com/#contact',
+                  },
+                ],
+              },
+            ]),
           }}
         />
       </head>

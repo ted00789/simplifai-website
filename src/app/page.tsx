@@ -10,7 +10,7 @@ import FAQSection from '@/components/FAQSection'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'AI Receptionist for Service Businesses | SimplifAI Solutions',
+  title: 'SimplifAI Solutions | AI Receptionists for Service Businesses',
   description: 'SimplifAI builds custom AI receptionists that answer calls 24/7, qualify leads, and book appointments for service businesses. Never miss a customer again.',
   alternates: { canonical: 'https://simplifai-solutions.com/' },
 }
