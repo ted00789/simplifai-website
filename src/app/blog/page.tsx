@@ -60,21 +60,21 @@ const posts = [
     excerpt: 'A Talking Website is a website that answers itself: phone calls and chat messages, 24/7. Here\'s what that means and why it matters for your business.',
     category: 'Websites',
     readTime: '5 min read',
-    slug: '#',
+    slug: '/blog/what-is-a-talking-website/',
   },
   {
     title: '5 Signs Your Business Needs an AI Receptionist',
     excerpt: 'If any of these five things are happening in your business, you\'re losing money to missed calls. Here\'s how to know, and what to do about it.',
     category: 'Small Business Tips',
     readTime: '4 min read',
-    slug: '#',
+    slug: '/blog/5-signs-your-business-needs-an-ai-receptionist/',
   },
   {
     title: 'AI Chatbot for Your Website: The Complete Guide for Service Businesses',
     excerpt: 'Your website visitors have questions. If they can\'t get quick answers, they leave. Here\'s how an AI chatbot changes that, and what to look for.',
     category: 'AI Chatbot',
     readTime: '7 min read',
-    slug: '#',
+    slug: '/blog/ai-chatbot-for-service-businesses/',
   },
 ]
 
