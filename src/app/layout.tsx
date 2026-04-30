@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: {
     default: 'AI Receptionist for Service Businesses | SimplifAI Solutions',
-    template: '%s | SimplifAI Solutions',
+    template: '%s',
   },
   description: 'SimplifAI builds custom AI receptionists, chatbots, and websites that work 24/7 for service businesses. Never miss a call or lead again.',
   keywords: 'AI receptionist, AI answering service, 24/7 call answering, service business AI, missed calls solution, AI chatbot for website, custom website service business',
