@@ -6,9 +6,13 @@ export interface BlogPost {
   category: string
   readTime: string
   publishDate: string
+  /** ISO 8601 date for schema markup, e.g. '2026-04-30' */
+  isoDate: string
   excerpt: string
   /** Optional hero image path under /public, e.g. '/blog/my-post.jpg' */
   heroImage?: string
+  /** FAQ items for FAQPage schema — boosts AI citation rate significantly */
+  faq?: { q: string; a: string }[]
   /**
    * Content uses Markdown-like syntax PLUS these special blocks:
    *
@@ -49,8 +53,16 @@ export const blogPosts: BlogPost[] = [
     category: 'AI Receptionist',
     readTime: '12 min read',
     publishDate: 'April 2026',
+    isoDate: '2026-04-30',
     excerpt: 'We analyzed hundreds of thousands of real business calls and spoke with owners who\'ve made the switch. Here are 17 data-backed ways an AI receptionist saves you time and money — with a real example for each one.',
     heroImage: '/blog/hero-receptionist-types.jpg',
+    faq: [
+      { q: 'How much money can an AI receptionist save a small business?', a: 'A full-time human receptionist costs $2,500–$3,500 per month plus benefits and only works 8 hours a day. An AI receptionist starts at $297/month and works 24/7, saving most service businesses $2,000–$3,000+ per month compared to staffing costs.' },
+      { q: 'What tasks can an AI receptionist handle?', a: 'An AI receptionist can answer calls 24/7, qualify leads, book appointments, take messages, give basic estimates, route calls to the right person, send follow-up texts, and integrate with your CRM and calendar — all without human involvement.' },
+      { q: 'Will callers know they\'re talking to an AI?', a: 'Modern AI receptionists sound natural and conversational. Many businesses choose to disclose the AI upfront; others brand it as their "virtual assistant." In either case, callers consistently report better experiences than being sent to voicemail or put on hold.' },
+      { q: 'How long does it take to set up an AI receptionist?', a: 'Most AI receptionist setups take 3–7 business days from kickoff to go-live. Setup involves training the AI on your business details, services, pricing, and call handling preferences.' },
+      { q: 'Can an AI receptionist book appointments?', a: 'Yes. AI receptionists integrate with tools like Google Calendar, Calendly, and most CRMs. When a caller wants to book, the AI checks real-time availability and schedules the appointment directly — no human needed.' },
+    ],
     content: `
 Missing calls is costing your business more than you think.
 
@@ -302,7 +314,14 @@ The businesses winning in 2026 aren't necessarily the ones with the biggest mark
     category: 'AI Receptionist',
     readTime: '5 min read',
     publishDate: 'April 2026',
+    isoDate: '2026-04-30',
     excerpt: 'Most service business owners underestimate what they\'re spending on missed calls. Here\'s a transparent breakdown of AI receptionist pricing and whether it makes financial sense.',
+    faq: [
+      { q: 'How much does an AI receptionist cost per month?', a: 'AI receptionist services typically start at $200–$300 per month for basic plans. At SimplifAI, pricing starts at $297/month plus call usage billed at $0.10–$0.20 per minute. Most clients spend an additional $30–$50/month on call usage, making the all-in cost around $330–$350/month for a typical service business.' },
+      { q: 'Is an AI receptionist cheaper than a human receptionist?', a: 'Yes — significantly cheaper. A full-time human receptionist costs $2,500–$3,500/month in salary alone, plus benefits, taxes, and training. An AI receptionist that works 24/7 costs a fraction of that, typically $300–$500/month all-in.' },
+      { q: 'Are there setup fees for an AI receptionist?', a: 'Most providers, including SimplifAI, charge a one-time setup fee to build and train the AI on your business. This covers call flow design, voice customization, calendar and CRM integration, and testing. The fee varies by complexity and is quoted before you commit.' },
+      { q: 'What affects the cost of an AI receptionist?', a: 'The main cost factors are: monthly platform fee, call volume (per-minute billing), number of integrations (CRM, calendar, etc.), complexity of call flows, and whether you need multi-language support. Custom-built solutions cost more upfront but perform significantly better than generic templates.' },
+    ],
     content: `
 The first question most business owners ask about an AI receptionist is: how much does it cost?
 
@@ -368,7 +387,14 @@ If you want to understand what a custom build would cost for your specific busin
     category: 'AI Receptionist',
     readTime: '6 min read',
     publishDate: 'April 2026',
+    isoDate: '2026-04-30',
     excerpt: 'Traditional answering services and AI receptionists both answer calls. But the way they handle your business — and what they cost — is completely different.',
+    faq: [
+      { q: 'What is the difference between an AI receptionist and an answering service?', a: 'A traditional answering service uses live human operators who take messages and relay them to you. An AI receptionist is software that answers calls 24/7, qualifies leads, books appointments, and integrates with your business systems — without any human involvement or per-call costs billed at high hourly rates.' },
+      { q: 'Is an AI receptionist better than an answering service?', a: 'For most service businesses, yes. AI receptionists answer calls faster (under 5 seconds), work 24/7 without overtime charges, can book appointments in real time, and cost 60–80% less than traditional answering services. Answering services may be better for calls requiring nuanced human judgment.' },
+      { q: 'How much does a traditional answering service cost vs. an AI receptionist?', a: 'Traditional answering services typically cost $1–$3 per minute or $250–$800/month depending on call volume. AI receptionists start at $200–$300/month with per-minute usage of $0.10–$0.20 — making AI significantly cheaper at any meaningful call volume.' },
+      { q: 'Can an AI receptionist replace a human answering service completely?', a: 'For the majority of service business calls — scheduling, lead qualification, FAQs, estimates, and message taking — yes. AI handles these perfectly. For complex complaint resolution or sensitive conversations, some businesses keep a human backup option for escalations.' },
+    ],
     content: `
 When a business owner starts looking at options for handling missed calls, two solutions come up constantly: traditional answering services and AI receptionists.
 
@@ -449,7 +475,14 @@ The best way to understand the difference is to call one. Our live demos are ava
     category: 'AI Receptionist',
     readTime: '7 min read',
     publishDate: 'April 2026',
+    isoDate: '2026-04-30',
     excerpt: 'HVAC businesses lose more revenue to missed calls than almost any other industry. Here\'s how AI receptionists are changing that, and what to look for when choosing one.',
+    faq: [
+      { q: 'Do HVAC companies need an AI receptionist?', a: 'HVAC companies receive a high volume of emergency calls after hours — broken AC units, heating failures, and similar urgent situations. Because customers call competitors if their call goes unanswered, HVAC businesses benefit significantly from 24/7 AI call answering. Many HVAC operators report that after-hours calls represent 30–40% of their total revenue.' },
+      { q: 'Can an AI receptionist handle HVAC emergency calls?', a: 'Yes. An AI receptionist can be trained to identify emergency calls, collect the customer\'s address and problem description, provide a callback time estimate, and alert the on-call technician via text — all in under 2 minutes, with no hold time.' },
+      { q: 'How does an AI receptionist book HVAC service appointments?', a: 'The AI connects to your scheduling system (Google Calendar, ServiceTitan, Housecall Pro, or similar) and checks real-time availability. When a customer calls to book, the AI presents available slots, confirms the appointment, and sends the customer a confirmation text — no dispatcher needed.' },
+      { q: 'What does an AI receptionist for an HVAC company cost?', a: 'HVAC-specific AI receptionist setups typically start at $297–$500/month depending on call volume and integrations. Given that a single recovered after-hours service call often generates $300–$1,000 in revenue, most HVAC businesses recoup the cost within the first month.' },
+    ],
     content: `
 HVAC businesses have a problem that most industries don't: their customers call in emergencies.
 
@@ -536,7 +569,14 @@ Or book a free call with us. We'll show you what a custom build would look and s
     category: 'AI Receptionist',
     readTime: '6 min read',
     publishDate: 'April 2026',
+    isoDate: '2026-04-30',
     excerpt: 'In real estate, the agent who answers first wins. Here\'s how AI receptionists are helping agents capture more leads and spend less time on the phone.',
+    faq: [
+      { q: 'How can a real estate agent use an AI receptionist?', a: 'Real estate agents use AI receptionists to answer calls while showing properties, qualify buyer and seller inquiries, schedule showings, and capture leads from property sign calls and online listings — all without interrupting client meetings or losing prospects to competitors.' },
+      { q: 'Can an AI receptionist qualify real estate leads?', a: 'Yes. An AI receptionist can ask pre-qualifying questions (timeline to buy or sell, pre-approval status, price range, neighborhood preference) and route hot leads to the agent immediately while scheduling follow-up calls for warm leads.' },
+      { q: 'What happens when a buyer calls a property sign and the agent is busy?', a: 'With an AI receptionist, the call is answered immediately. The AI captures the caller\'s interest, answers basic property questions, and schedules a callback or showing — so the lead is never lost to voicemail.' },
+      { q: 'Is an AI receptionist worth it for a solo real estate agent?', a: 'Especially for solo agents, yes. A single captured lead that converts to a transaction can generate $5,000–$15,000+ in commission. An AI receptionist at $297–$400/month pays for itself with one additional closing per year — and most agents report capturing several additional leads per month.' },
+    ],
     content: `
 In real estate, speed is the whole game.
 
@@ -607,7 +647,14 @@ Or book a free call with us and we'll build you a custom demo based on your actu
     category: 'Small Business Tips',
     readTime: '5 min read',
     publishDate: 'April 2026',
+    isoDate: '2026-04-30',
     excerpt: 'Every missed call is a potential job lost. Here are three ways to make sure every call to your business gets answered — and which one actually works best.',
+    faq: [
+      { q: 'How do I make sure I never miss a business call?', a: 'The three most effective solutions are: (1) hire a full-time receptionist ($2,500+/month), (2) use a traditional answering service ($250–$800/month), or (3) implement an AI receptionist ($200–$500/month). AI receptionists offer the best combination of cost, coverage, and capability for most small service businesses.' },
+      { q: 'What percentage of business calls go unanswered?', a: 'Studies show that small service businesses miss 60–80% of incoming calls, particularly those that come in after hours, during lunch, or when the owner is on another job. For businesses without dedicated front-desk staff, the miss rate is even higher.' },
+      { q: 'What happens to customers when their call goes unanswered?', a: 'Research shows that 62% of callers won\'t leave a voicemail — they hang up and call your competitor. For local service businesses, this means a missed call is almost always a missed job. Speed to answer is one of the top factors customers use when choosing a service provider.' },
+      { q: 'Is call forwarding a good solution for missed business calls?', a: 'Call forwarding to your personal cell phone can help, but it doesn\'t solve the core problem — you still can\'t answer calls while working, driving, or sleeping. It also blurs work-life boundaries. A dedicated answering solution (AI or human) is a more sustainable and professional approach.' },
+    ],
     content: `
 Every unanswered call to your business is a job you didn't get.
 

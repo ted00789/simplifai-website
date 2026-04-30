@@ -1,0 +1,41 @@
+# SimplifAI Solutions
+
+> SimplifAI builds custom AI receptionists, AI chatbots, and websites for service businesses. We help plumbers, HVAC companies, real estate agents, auto detailers, lawn care businesses, and other service providers answer every call and capture every lead — 24 hours a day, 7 days a week — without hiring staff.
+
+## What We Do
+
+- **AI Receptionist**: A custom-built AI that answers your business phone calls 24/7, qualifies leads, books appointments, gives estimates, and connects to your calendar and CRM. Starts at $297/month.
+- **AI Chatbot**: A custom AI chatbot embedded on your website that answers visitor questions instantly, qualifies leads, and books appointments around the clock. Included in the $397/month bundle.
+- **The Talking Website**: Our flagship package — a custom website built from scratch, with an AI receptionist and AI chatbot working together. Starts at $480/month + $1,500 one-time website build fee.
+
+## Who We Serve
+
+Service businesses across the United States including: HVAC companies, plumbers, electricians, roofers, landscapers, lawn care businesses, auto detailers, real estate agents, insurance agents, dental practices, and other local service providers.
+
+## Key Facts
+
+- Founded by Tadeáš Manas
+- Based in the United States
+- All AI systems are custom-built for each client (not cookie-cutter)
+- No long-term contracts required
+- Call usage billed at $0.10–$0.20/min (most clients spend $30–$50/month on usage)
+- 24/7 text support from founder
+
+## Key Pages
+
+- Homepage: https://simplifai-solutions.com/
+- AI Receptionist: https://simplifai-solutions.com/ai-receptionist/
+- AI Chatbot: https://simplifai-solutions.com/ai-chatbot/
+- Website Design: https://simplifai-solutions.com/website-design/
+- Pricing: https://simplifai-solutions.com/pricing/
+- Blog: https://simplifai-solutions.com/blog/
+- Contact: https://simplifai-solutions.com/contact/
+
+## Pricing (Machine-Readable)
+
+See /pricing.md for structured pricing data.
+
+## Contact
+
+- Email: tadeas@simplifai-solutions.com
+- Book a call: https://calendly.com/ted-manas/ai-appointment-demo

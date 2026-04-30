@@ -508,7 +508,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             author: {
               '@type': 'Person',
               name: 'Tadeáš Manas',
-              url: 'https://simplifai-solutions.com',
+              url: 'https://simplifai-solutions.com/about/',
+              jobTitle: 'Founder',
+              worksFor: { '@type': 'Organization', name: 'SimplifAI Solutions' },
             },
             publisher: {
               '@type': 'Organization',
@@ -519,7 +521,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 url: 'https://simplifai-solutions.com/og-image.png',
               },
             },
-            datePublished: '2026-04-30',
+            datePublished: post.isoDate,
+            dateModified: post.isoDate,
             mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
           }),
         }}
@@ -538,6 +541,22 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           }),
         }}
       />
+      {post.faq && post.faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: post.faq.map(({ q, a }) => ({
+                '@type': 'Question',
+                name: q,
+                acceptedAnswer: { '@type': 'Answer', text: a },
+              })),
+            }),
+          }}
+        />
+      )}
 
       <Navigation />
 
@@ -640,6 +659,24 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                   Book a Free Call <ArrowRight size={16} />
                 </a>
               </div>
+              {/* ── FAQ Section ── */}
+              {post.faq && post.faq.length > 0 && (
+                <div className="mt-16">
+                  <h2 className="text-2xl font-black text-white mb-6">Frequently Asked Questions</h2>
+                  <div className="flex flex-col gap-4">
+                    {post.faq.map(({ q, a }, i) => (
+                      <div
+                        key={i}
+                        className="rounded-xl p-6"
+                        style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
+                      >
+                        <h3 className="text-base font-bold text-white mb-2">{q}</h3>
+                        <p className="text-sm leading-relaxed" style={{ color: '#94a3b8' }}>{a}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </article>
 
             {/* ── Sticky Sidebar ── */}
