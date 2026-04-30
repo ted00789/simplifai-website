@@ -316,6 +316,31 @@ function renderContent(content: string): React.ReactNode {
               {trimmed.replace('### ', '')}
             </h3>
           )
+        } else if (trimmed.startsWith('[IMAGE ') && trimmed.endsWith(']')) {
+          flushList()
+          const inner = trimmed.slice(7, -1)
+          const pipeIdx = inner.indexOf(' | ')
+          const src = pipeIdx >= 0 ? inner.slice(0, pipeIdx).trim() : inner.trim()
+          const caption = pipeIdx >= 0 ? inner.slice(pipeIdx + 3).trim() : ''
+          elements.push(
+            <figure key={key++} className="my-10">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={src}
+                alt={caption || ''}
+                className="w-full rounded-2xl object-cover"
+                style={{ maxHeight: '480px' }}
+              />
+              {caption && (
+                <figcaption
+                  className="text-center text-sm mt-3 italic"
+                  style={{ color: '#475569' }}
+                >
+                  {caption}
+                </figcaption>
+              )}
+            </figure>
+          )
         } else if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
           listItems.push(trimmed.replace(/^[-*] /, ''))
         } else if (trimmed === '') {

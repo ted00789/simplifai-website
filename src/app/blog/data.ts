@@ -50,6 +50,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '12 min read',
     publishDate: 'April 2026',
     excerpt: 'We analyzed hundreds of thousands of real business calls and spoke with owners who\'ve made the switch. Here are 17 data-backed ways an AI receptionist saves you time and money — with a real example for each one.',
+    heroImage: '/blog/hero-receptionist-types.jpg',
     content: `
 Missing calls is costing your business more than you think.
 
@@ -109,6 +110,8 @@ REAL-WORLD EXAMPLE
 An HVAC company using an AI receptionist saw 3+ appointments booked automatically per day during peak season, with zero phone tag and a measurable reduction in no-shows due to automated confirmation messages.
 [/CALLOUT]
 
+[IMAGE /blog/ai-appointment-booking.jpg | The AI books the appointment before the caller hangs up — no callback required]
+
 ## 04. Qualifies Leads Before They Reach You
 
 Not every caller is a qualified prospect. An AI receptionist asks the right screening questions upfront — service type, location, budget, urgency — and filters out tire-kickers before they consume your time. Only high-value, qualified leads get routed through to you or your sales team.
@@ -141,6 +144,8 @@ Water heater leaking. Electrical sparking. No cooling during a heatwave. These c
 REAL-WORLD EXAMPLE
 AI receptionist platforms built for the trades are programmed to recognize emergency terminology specific to each industry — ensuring the right on-call technician is alerted immediately while routine calls are handled automatically.
 [/CALLOUT]
+
+[IMAGE /blog/ai-call-routing.jpg | Emergency calls get routed instantly to the right person — routine calls are handled automatically]
 
 ## 07. Scales Instantly During Your Busiest Periods
 
@@ -186,6 +191,8 @@ REAL-WORLD EXAMPLE
 Enterprise-grade platforms in 2026 offer native integration with Salesforce, HubSpot, Google Calendar, and workflow automation tools — enabling businesses to go from first call to completed CRM record without a single manual step.
 [/CALLOUT]
 
+[IMAGE /blog/ai-crm-integration.jpg | Every call automatically updates your CRM — no manual data entry, no dropped leads]
+
 ## 11. Supports Multiple Languages Without Extra Cost
 
 A human receptionist is typically fluent in one language. An AI receptionist can serve customers in 7, 20, or even 90+ languages depending on the platform — with no additional staffing, no premium pricing, and no noticeable drop in call quality.
@@ -207,6 +214,8 @@ Which questions come up most? When does your peak call volume occur? Which servi
 REAL-WORLD EXAMPLE
 AI receptionist dashboards give business owners real-time visibility into call volume, lead qualification rates, appointment booking conversion, and caller sentiment — enabling data-driven decisions that were previously impossible for small businesses.
 [/CALLOUT]
+
+[IMAGE /blog/ai-analytics-dashboard.jpg | Real-time analytics on every call: volume, sentiment, booking conversion, and more]
 
 ## 13. Captures Leads You Would Otherwise Lose to Voicemail
 
