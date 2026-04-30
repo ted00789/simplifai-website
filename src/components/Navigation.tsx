@@ -46,16 +46,16 @@ export default function Navigation() {
         borderBottom: '1px solid rgba(255,255,255,0.07)',
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
 
         {/* Logo */}
         <Link href="/" className="flex items-center flex-shrink-0">
           <Image
             src="/logo.png"
             alt="SimplifAI Solutions"
-            width={220}
-            height={60}
-            className="h-14 w-auto object-contain"
+            width={280}
+            height={75}
+            className="h-16 w-auto object-contain"
             priority
           />
         </Link>
