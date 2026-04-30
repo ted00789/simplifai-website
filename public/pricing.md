@@ -45,9 +45,8 @@ All plans include custom setup, no long-term contracts, and 24/7 text support fr
 ## Plan 3: The Talking Website (Flagship)
 
 - **Price**: Starting at $480/month
-- **Website build**: $1,500 one-time (custom website built from scratch)
 - **Call usage**: $0.10–$0.20 per minute (most clients: $30–$50/month)
-- **Setup fee**: One-time setup fee (quoted separately)
+- **Setup fee**: One-time (quoted separately)
 - **Best for**: Service businesses that want a complete automated front-of-house
 
 ### Features included:

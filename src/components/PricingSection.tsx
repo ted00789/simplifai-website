@@ -46,7 +46,7 @@ const tiers = [
     name: 'The Talking Website',
     price: 'Starting at $480',
     period: '/mo',
-    setup: 'Custom website from $1,500 (one-time). Setup fee applies separately.',
+    setup: 'One-time setup fee applies separately',
     callNote: 'Call usage billed at $0.10 to $0.20 per minute based on your setup',
     description: 'Your entire front-of-house, fully automated. Our flagship package.',
     features: [
