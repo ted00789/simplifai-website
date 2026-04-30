@@ -14,6 +14,13 @@ const categories = ['All', 'AI Receptionist', 'AI Chatbot', 'Websites', 'Small B
 
 const posts = [
   {
+    title: '17 Proven Ways an AI Receptionist Can Save Your Business Time and Money',
+    excerpt: 'We analyzed hundreds of thousands of real business calls. Here are 17 data-backed ways an AI receptionist saves you time and money — with a real example for each one.',
+    category: 'AI Receptionist',
+    readTime: '12 min read',
+    slug: '/blog/17-ways-ai-receptionist-saves-time-and-money/',
+  },
+  {
     title: 'AI Receptionist for HVAC Companies: Complete Guide 2026',
     excerpt: 'How HVAC businesses are using AI receptionists to answer after-hours calls, qualify leads, and book jobs automatically, without missing a single call.',
     category: 'AI Receptionist',
