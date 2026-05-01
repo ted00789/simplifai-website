@@ -750,6 +750,7 @@ Or book a free call and we'll walk you through what a custom build for your busi
     readTime: '5 min read',
     publishDate: 'April 25, 2026',
     isoDate: '2026-04-25',
+    excerpt: 'A Talking Website is a website that answers itself — phone calls and chat messages, 24/7. Here\'s what that means, how it works, and why service businesses are making the switch.',
     heroImage: '/blog/blog-answering-service-vs-ai.jpg',
     faq: [
       { q: 'What is a Talking Website?', a: 'A Talking Website is a website that can actively answer questions and capture leads — through both an AI phone receptionist and an AI chat widget — 24 hours a day, 7 days a week. Instead of being a static brochure, it works like a live front desk that\'s always available.' },
@@ -875,6 +876,7 @@ If you want to see exactly what it would look like for your business, [book a fr
     readTime: '4 min read',
     publishDate: 'April 11, 2026',
     isoDate: '2026-04-11',
+    excerpt: 'If any of these five things are happening in your business right now, you\'re losing money to missed calls. Here\'s how to spot the signs and what to do about it.',
     heroImage: '/blog/blog-never-miss-call.jpg',
     faq: [
       { q: 'How do I know if I need an AI receptionist?', a: 'The clearest signs are: you\'re missing calls while on the job, you receive calls after hours that go to voicemail, you\'re spending significant time answering the same basic questions, or you\'ve noticed leads going cold because of slow response times. Any one of these signals a missed-call problem that an AI receptionist directly solves.' },
@@ -962,6 +964,7 @@ Or, if you want to hear it first, call one of our live demo lines and experience
     readTime: '7 min read',
     publishDate: 'March 24, 2026',
     isoDate: '2026-03-24',
+    excerpt: 'Your website visitors have questions. If they can\'t get instant answers, they leave. Here\'s how an AI chatbot captures those leads automatically — and what to look for when choosing one.',
     heroImage: '/blog/blog-pricing-ai-receptionist.jpg',
     faq: [
       { q: 'What is an AI chatbot for a service business website?', a: 'An AI chatbot is a widget embedded on your website that answers visitor questions in real time, 24/7. Unlike basic live chat tools, an AI chatbot is trained on your business — your services, pricing, availability, and FAQs — so it gives accurate, specific answers instead of generic responses.' },
