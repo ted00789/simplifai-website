@@ -1149,7 +1149,7 @@ Quick answer: What is an AI receptionist?
 An AI receptionist is a 24/7 phone answering system powered by artificial intelligence that picks up your business calls, responds in natural conversational language, and takes real action: booking appointments, qualifying leads, routing emergencies, answering questions. No human on the other end. The key difference from voicemail: it gets callers to a resolution before they hang up.
 [/CALLOUT]
 
-[IMAGE /blog/what-is-ai-receptionist-hero.jpg | A service business owner on the job while their phone rings unanswered. The exact problem an AI receptionist solves.]
+[IMAGE /blog/blog-ai-receptionist-answering.jpg | An AI receptionist handling live calls around the clock — answering, booking, and qualifying leads while you focus on the job]
 
 ## What is an AI receptionist?
 
@@ -1173,7 +1173,7 @@ Between 35% and 47% of all calls to small businesses come in outside business ho
 
 I've had HVAC clients book service jobs at 11:30 PM on a Friday through their AI receptionist. Without it, that would have been a voicemail the customer never left. **62% of callers won't leave a voicemail.** They just call someone else.
 
-[IMAGE /blog/blog-ai-receptionist-calendar.jpg | An AI receptionist books appointments directly into your calendar in real time. No callbacks, no double-bookings, no phone tag.]
+[IMAGE /blog/blog-ai-booking-appointment.jpg | The AI receptionist books the appointment directly while the caller is still on the line — confirmed, logged, and sent to your calendar instantly]
 
 ### 2. Books appointments directly into your calendar
 
@@ -1218,7 +1218,7 @@ At SimplifAI, every build connects to whatever tools a client is already using. 
 
 Roughly 7% of all incoming business calls are spam or robocalls. In some industries like electrical contracting, that number hits 15%. Most AI receptionist platforms include built-in spam filtering that catches these before they ever ring through, keeping your lead pipeline clean.
 
-[IMAGE /blog/blog-ai-receptionist-service-worker.jpg | A service technician on the job while the AI receptionist handles every incoming call automatically in the background]
+[IMAGE /blog/blog-phone-ringing.jpg | Every unanswered ring is a potential job walking to your competitor — an AI receptionist picks up every single call]
 
 ## See it in action: AI receptionist for a car service business
 
@@ -1274,7 +1274,7 @@ Probably, and here's how to find out.
 
 Take your average job value. Multiply it by the number of calls you realistically miss in a month. Then multiply by your close rate on the calls you do answer. That number is a conservative floor for what unanswered calls are costing you.
 
-[IMAGE /blog/blog-missed-call-cost.jpg | Calculating the true cost of missed calls for service businesses. The number is almost always bigger than owners expect.]
+[IMAGE /blog/blog-missed-call-calculator.jpg | The missed call math is simple: average job value × missed calls per month × your close rate = revenue left on the table every single month]
 
 [CALLOUT]
 Quick missed-call calculation
