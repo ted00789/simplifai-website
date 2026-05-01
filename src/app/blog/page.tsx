@@ -14,6 +14,13 @@ const categories = ['All', 'AI Receptionist', 'AI Chatbot', 'Websites', 'Small B
 
 const posts = [
   {
+    title: 'What Is an AI Receptionist? Everything Service Businesses Need to Know',
+    excerpt: 'An AI receptionist answers your business phone 24/7, books appointments, qualifies leads, and routes emergencies — without a human on the other end. Here\'s how it works and who needs one.',
+    category: 'AI Receptionist',
+    readTime: '10 min read',
+    slug: '/blog/what-is-an-ai-receptionist/',
+  },
+  {
     title: '17 Proven Ways an AI Receptionist Can Save Your Business Time and Money',
     excerpt: 'We analyzed hundreds of thousands of real business calls. Here are 17 data-backed ways an AI receptionist saves you time and money — with a real example for each one.',
     category: 'AI Receptionist',

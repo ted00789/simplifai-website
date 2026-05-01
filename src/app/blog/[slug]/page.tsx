@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import Script from 'next/script'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -365,6 +366,40 @@ function renderContent(content: string): React.ReactNode {
               )}
             </figure>
           )
+        } else if (trimmed.startsWith('[INSTAGRAM ') && trimmed.endsWith(']')) {
+          flushList()
+          const urlMatch = trimmed.match(/url="([^"]+)"/)
+          const captionMatch = trimmed.match(/caption="([^"]+)"/)
+          const igUrl = urlMatch ? urlMatch[1] : ''
+          const igCaption = captionMatch ? captionMatch[1] : ''
+          elements.push(
+            <figure key={key++} className="my-10 flex flex-col items-center">
+              <div className="w-full max-w-lg mx-auto rounded-2xl overflow-hidden">
+                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                <blockquote
+                  className="instagram-media"
+                  {...({ 'data-instgrm-permalink': igUrl, 'data-instgrm-version': '14' } as any)}
+                  style={{
+                    background: '#FFF', border: 0, borderRadius: '3px',
+                    boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
+                    margin: '1px auto', maxWidth: '540px', minWidth: '326px',
+                    padding: 0, width: 'calc(100% - 2px)',
+                  }}
+                >
+                  <a href={igUrl} target="_blank" rel="noopener noreferrer"
+                    style={{ color: '#000', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontWeight: 550, lineHeight: '18px', padding: '16px', display: 'block' }}
+                  >
+                    View this reel on Instagram ↗
+                  </a>
+                </blockquote>
+              </div>
+              {igCaption && (
+                <figcaption className="text-center text-sm mt-3 italic" style={{ color: '#475569' }}>
+                  {igCaption}
+                </figcaption>
+              )}
+            </figure>
+          )
         } else if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
           listItems.push(trimmed.replace(/^[-*] /, ''))
         } else if (trimmed === '') {
@@ -558,6 +593,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         />
       )}
 
+      {post.content.includes('[INSTAGRAM') && (
+        <Script src="https://www.instagram.com/embed.js" strategy="afterInteractive" />
+      )}
       <Navigation />
 
       <div className="pt-28 pb-20 px-6">
