@@ -88,8 +88,38 @@ export default function ProblemSolutionSection() {
         .aurora-blob-red  { animation: auroraDriftRed  13s ease-in-out infinite; }
         .aurora-blob-cyan { animation: auroraDriftCyan 16s ease-in-out infinite; }
 
+        /* ── Breathing glow on the cards (always on) ── */
+        @keyframes glowBreathRed {
+          0%,100% { box-shadow: 0 0 40px rgba(239,68,68,0.08), 0 4px 24px rgba(0,0,0,0.3); }
+          50%      { box-shadow: 0 0 90px rgba(239,68,68,0.22), 0 0 50px rgba(239,68,68,0.1), 0 4px 24px rgba(0,0,0,0.3); }
+        }
+        @keyframes glowBreathCyan {
+          0%,100% { box-shadow: 0 0 40px rgba(34,211,238,0.07), 0 4px 24px rgba(0,0,0,0.3); }
+          50%      { box-shadow: 0 0 90px rgba(34,211,238,0.19), 0 0 50px rgba(34,211,238,0.08), 0 4px 24px rgba(0,0,0,0.3); }
+        }
+
+        .problem-card-outer {
+          animation: glowBreathRed 4.5s ease-in-out infinite;
+          transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .problem-card-outer:hover {
+          transform: translateY(-7px);
+          box-shadow: 0 0 110px rgba(239,68,68,0.32), 0 28px 70px rgba(0,0,0,0.5) !important;
+        }
+
+        .fix-card-outer {
+          animation: glowBreathCyan 4.5s ease-in-out infinite;
+          animation-delay: 2.25s;
+          transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .fix-card-outer:hover {
+          transform: translateY(-7px);
+          box-shadow: 0 0 110px rgba(34,211,238,0.28), 0 28px 70px rgba(0,0,0,0.5) !important;
+        }
+
         @media (prefers-reduced-motion: reduce) {
           .aurora-blob-red, .aurora-blob-cyan { animation: none; }
+          .problem-card-outer, .fix-card-outer { animation: none; transition: none; }
         }
       `}</style>
 
@@ -99,11 +129,10 @@ export default function ProblemSolutionSection() {
           {/* ══ THE PROBLEM ══ */}
           {/* Gradient-border wrapper: 1px padding + gradient bg creates the border */}
           <div
-            className="reveal rounded-2xl"
+            className="reveal rounded-2xl problem-card-outer"
             style={{
               padding: '1px',
               background: 'linear-gradient(135deg, rgba(239,68,68,0.5) 0%, rgba(239,68,68,0.15) 40%, rgba(239,68,68,0.04) 100%)',
-              boxShadow: '0 0 60px rgba(239,68,68,0.08)',
             }}
           >
             <div
@@ -173,11 +202,10 @@ export default function ProblemSolutionSection() {
 
           {/* ══ THE FIX ══ */}
           <div
-            className="reveal reveal-delay-2 rounded-2xl"
+            className="reveal reveal-delay-2 rounded-2xl fix-card-outer"
             style={{
               padding: '1px',
               background: 'linear-gradient(135deg, rgba(34,211,238,0.45) 0%, rgba(34,211,238,0.12) 40%, rgba(34,211,238,0.02) 100%)',
-              boxShadow: '0 0 60px rgba(34,211,238,0.07)',
             }}
           >
             <div
