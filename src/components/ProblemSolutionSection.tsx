@@ -45,91 +45,203 @@ export default function ProblemSolutionSection() {
     <section
       ref={sectionRef as React.RefObject<HTMLElement>}
       id="problem-solution"
-      className="relative py-16 md:py-20 px-6"
+      className="relative py-16 md:py-20 px-6 overflow-hidden"
       style={{ background: '#09112c' }}
     >
-      <div className="max-w-7xl mx-auto">
+      {/* ── Aurora blobs ── */}
+      <div
+        className="absolute pointer-events-none aurora-blob-red"
+        style={{
+          width: '560px',
+          height: '560px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(239,68,68,0.2) 0%, rgba(239,68,68,0.06) 45%, transparent 70%)',
+          top: '-140px',
+          left: '-120px',
+          filter: 'blur(72px)',
+        }}
+      />
+      <div
+        className="absolute pointer-events-none aurora-blob-cyan"
+        style={{
+          width: '620px',
+          height: '620px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(34,211,238,0.17) 0%, rgba(34,211,238,0.05) 45%, transparent 70%)',
+          bottom: '-180px',
+          right: '-140px',
+          filter: 'blur(80px)',
+        }}
+      />
 
-        {/* Two-column layout */}
+      <style>{`
+        @keyframes auroraDriftRed {
+          0%,100% { transform: translate(0,0) scale(1); }
+          33%      { transform: translate(28px,18px) scale(1.06); }
+          66%      { transform: translate(-18px,28px) scale(0.96); }
+        }
+        @keyframes auroraDriftCyan {
+          0%,100% { transform: translate(0,0) scale(1); }
+          33%      { transform: translate(-22px,-18px) scale(1.09); }
+          66%      { transform: translate(14px,-26px) scale(0.94); }
+        }
+        .aurora-blob-red  { animation: auroraDriftRed  13s ease-in-out infinite; }
+        .aurora-blob-cyan { animation: auroraDriftCyan 16s ease-in-out infinite; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .aurora-blob-red, .aurora-blob-cyan { animation: none; }
+        }
+      `}</style>
+
+      <div className="max-w-7xl mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
 
-          {/* Left: The Problem */}
+          {/* ══ THE PROBLEM ══ */}
+          {/* Gradient-border wrapper: 1px padding + gradient bg creates the border */}
           <div
-            className="rounded-2xl p-6 md:p-8 reveal"
+            className="reveal rounded-2xl"
             style={{
-              background: 'rgba(239,68,68,0.03)',
-              border: '1px solid rgba(239,68,68,0.1)',
+              padding: '1px',
+              background: 'linear-gradient(135deg, rgba(239,68,68,0.5) 0%, rgba(239,68,68,0.15) 40%, rgba(239,68,68,0.04) 100%)',
+              boxShadow: '0 0 60px rgba(239,68,68,0.08)',
             }}
           >
-            <div className="flex items-center gap-3 mb-7">
+            <div
+              className="rounded-2xl p-6 md:p-8 h-full relative overflow-hidden"
+              style={{
+                background: 'rgba(7,9,26,0.92)',
+                backdropFilter: 'blur(24px)',
+                WebkitBackdropFilter: 'blur(24px)',
+              }}
+            >
+              {/* Top colour-bleed spotlight */}
               <div
-                className="w-7 h-7 rounded-lg flex items-center justify-center text-sm font-black flex-shrink-0"
-                style={{ background: 'rgba(239,68,68,0.15)', color: '#f87171', border: '1px solid rgba(239,68,68,0.2)' }}
-              >
-                ✕
-              </div>
-              <h3 className="text-3xl font-black text-white">The Problem</h3>
-            </div>
+                className="absolute inset-x-0 top-0 h-44 pointer-events-none"
+                style={{
+                  background: 'linear-gradient(180deg, rgba(239,68,68,0.13) 0%, transparent 100%)',
+                  borderRadius: '16px 16px 0 0',
+                }}
+              />
 
-            <div className="space-y-5">
-              {problems.map((item, i) => {
-                const Icon = item.icon
-                return (
-                  <div key={i} className="flex items-start gap-4">
-                    <div
-                      className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
-                      style={{ background: 'rgba(239,68,68,0.07)', border: '1px solid rgba(239,68,68,0.12)' }}
-                    >
-                      <Icon size={16} color="#f87171" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-white mb-1">{item.title}</p>
-                      <p className="text-sm leading-relaxed" style={{ color: '#475569' }}>{item.body}</p>
-                    </div>
+              <div className="relative">
+                {/* Section badge */}
+                <div className="flex items-center gap-3 mb-7">
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center text-base font-black flex-shrink-0"
+                    style={{
+                      background: 'rgba(239,68,68,0.1)',
+                      border: '1px solid rgba(239,68,68,0.35)',
+                      color: '#f87171',
+                      boxShadow: '0 0 22px rgba(239,68,68,0.28), inset 0 0 10px rgba(239,68,68,0.06)',
+                    }}
+                  >
+                    ✕
                   </div>
-                )
-              })}
+                  <h3 className="text-3xl font-black text-white">The Problem</h3>
+                </div>
+
+                <div className="space-y-6">
+                  {problems.map((item, i) => {
+                    const Icon = item.icon
+                    return (
+                      <div key={i} className="flex items-start gap-4">
+                        {/* Frosted-glass icon */}
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
+                          style={{
+                            background: 'rgba(239,68,68,0.07)',
+                            border: '1px solid rgba(239,68,68,0.18)',
+                            backdropFilter: 'blur(10px)',
+                            WebkitBackdropFilter: 'blur(10px)',
+                            boxShadow: '0 0 14px rgba(239,68,68,0.12), inset 0 0 8px rgba(239,68,68,0.04)',
+                          }}
+                        >
+                          <Icon size={16} color="#f87171" />
+                        </div>
+                        {/* Left accent line */}
+                        <div style={{ borderLeft: '2px solid rgba(239,68,68,0.22)', paddingLeft: '16px' }}>
+                          <p className="text-sm font-bold text-white mb-1">{item.title}</p>
+                          <p className="text-sm leading-relaxed" style={{ color: '#64748b' }}>{item.body}</p>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right: The Fix */}
+          {/* ══ THE FIX ══ */}
           <div
-            className="rounded-2xl p-6 md:p-8 reveal reveal-delay-2"
+            className="reveal reveal-delay-2 rounded-2xl"
             style={{
-              background: 'rgba(34,211,238,0.03)',
-              border: '1px solid rgba(34,211,238,0.1)',
+              padding: '1px',
+              background: 'linear-gradient(135deg, rgba(34,211,238,0.45) 0%, rgba(34,211,238,0.12) 40%, rgba(34,211,238,0.02) 100%)',
+              boxShadow: '0 0 60px rgba(34,211,238,0.07)',
             }}
           >
-            <div className="flex items-center gap-3 mb-7">
+            <div
+              className="rounded-2xl p-6 md:p-8 h-full relative overflow-hidden"
+              style={{
+                background: 'rgba(7,9,26,0.92)',
+                backdropFilter: 'blur(24px)',
+                WebkitBackdropFilter: 'blur(24px)',
+              }}
+            >
+              {/* Top colour-bleed spotlight */}
               <div
-                className="w-7 h-7 rounded-lg flex items-center justify-center text-sm font-black flex-shrink-0"
-                style={{ background: 'rgba(34,211,238,0.15)', color: '#22d3ee', border: '1px solid rgba(34,211,238,0.2)' }}
-              >
-                ✓
-              </div>
-              <h3 className="text-3xl font-black text-white">The Fix</h3>
-            </div>
+                className="absolute inset-x-0 top-0 h-44 pointer-events-none"
+                style={{
+                  background: 'linear-gradient(180deg, rgba(34,211,238,0.1) 0%, transparent 100%)',
+                  borderRadius: '16px 16px 0 0',
+                }}
+              />
 
-            <div className="space-y-5">
-              {solutions.map((item, i) => {
-                const Icon = item.icon
-                return (
-                  <div key={i} className="flex items-start gap-4">
-                    <div
-                      className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
-                      style={{ background: 'rgba(34,211,238,0.07)', border: '1px solid rgba(34,211,238,0.12)' }}
-                    >
-                      <Icon size={16} color="#22d3ee" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-white mb-1">{item.title}</p>
-                      <p className="text-sm leading-relaxed" style={{ color: '#475569' }}>{item.body}</p>
-                    </div>
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-7">
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center text-base font-black flex-shrink-0"
+                    style={{
+                      background: 'rgba(34,211,238,0.1)',
+                      border: '1px solid rgba(34,211,238,0.38)',
+                      color: '#22d3ee',
+                      boxShadow: '0 0 22px rgba(34,211,238,0.25), inset 0 0 10px rgba(34,211,238,0.06)',
+                    }}
+                  >
+                    ✓
                   </div>
-                )
-              })}
+                  <h3 className="text-3xl font-black text-white">The Fix</h3>
+                </div>
+
+                <div className="space-y-6">
+                  {solutions.map((item, i) => {
+                    const Icon = item.icon
+                    return (
+                      <div key={i} className="flex items-start gap-4">
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
+                          style={{
+                            background: 'rgba(34,211,238,0.06)',
+                            border: '1px solid rgba(34,211,238,0.18)',
+                            backdropFilter: 'blur(10px)',
+                            WebkitBackdropFilter: 'blur(10px)',
+                            boxShadow: '0 0 14px rgba(34,211,238,0.09), inset 0 0 8px rgba(34,211,238,0.03)',
+                          }}
+                        >
+                          <Icon size={16} color="#22d3ee" />
+                        </div>
+                        <div style={{ borderLeft: '2px solid rgba(34,211,238,0.22)', paddingLeft: '16px' }}>
+                          <p className="text-sm font-bold text-white mb-1">{item.title}</p>
+                          <p className="text-sm leading-relaxed" style={{ color: '#64748b' }}>{item.body}</p>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
